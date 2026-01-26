@@ -28,3 +28,6 @@ dev_server.log
 # Test results
 playwright-report/
 test-results/
+
+# Design files
+/design
