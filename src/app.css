@@ -1,3 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+	/* Smooth font rendering */
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		scroll-behavior: smooth;
+		@apply bg-parchment-200 dark:bg-forest-900 text-espresso-700 dark:text-parchment-100 transition-colors duration-300;
+	}
+
+	/* Base transitions for interactive elements */
+	a,
+	button {
+		transition: color 0.25s;
+	}
+}
+
+@layer components {
+	/* Smooth theme transitions */
+	.theme-transition {
+		@apply transition-colors duration-300;
+	}
+}

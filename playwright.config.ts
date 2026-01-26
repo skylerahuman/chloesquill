@@ -1,4 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as os from 'os';
+
+// Ensure HOME is set for Playwright
+if (!process.env.HOME) {
+	process.env.HOME = os.homedir();
+}
 
 export default defineConfig({
 	webServer: {
