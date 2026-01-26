@@ -6,6 +6,7 @@
 	import LightingEngine from '$lib/components/LightingEngine.svelte';
 	import AmbientParticles from '$lib/components/AmbientParticles.svelte';
 	import MoodBoardCarousel from '$lib/components/MoodBoardCarousel.svelte';
+	import InteractiveQuill from '$lib/components/InteractiveQuill.svelte';
 
 	let { children } = $props();
 	let mobileMenuOpen = $state(false);
@@ -29,8 +30,9 @@
 		<!-- Logo -->
 		<a
 			href="/"
-			class="text-3xl font-serif italic font-bold tracking-tight relative group cursor-pointer z-50 text-ink-900 dark:text-paper-100 mix-blend-difference"
+			class="text-3xl font-serif italic font-bold tracking-tight relative group cursor-pointer z-50 text-ink-900 dark:text-paper-100 mix-blend-difference flex items-center gap-3"
 		>
+			<InteractiveQuill />
 			Chloe.
 			<span
 				class="absolute -bottom-1 left-0 w-0 h-[2px] bg-cedar-500 transition-all duration-300 group-hover:w-full"
@@ -134,9 +136,7 @@
 	<AmbientParticles />
 
 	<!-- FOOTER -->
-	<footer
-		class="bg-ink-900 dark:bg-[#050404] text-paper-200 py-32 relative overflow-hidden mt-12"
-	>
+	<footer class="bg-ink-900 dark:bg-[#050404] text-paper-200 py-32 relative overflow-hidden mt-12">
 		<!-- Dust Texture -->
 		<div
 			class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"

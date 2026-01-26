@@ -7,7 +7,13 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		scroll-behavior: smooth;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
 		@apply bg-parchment-200 dark:bg-forest-800 text-espresso-700 dark:text-parchment-100 transition-colors duration-300;
+	}
+
+	html::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
 	}
 
 	/* Base transitions for interactive elements */
