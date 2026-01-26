@@ -2,8 +2,12 @@
 	import Button from '$lib/components/Button.svelte';
 </script>
 
-<section class="bg-parchment-100 dark:bg-forest-900 rounded-lg shadow-md p-8 md:p-12 text-center border border-parchment-300 dark:border-forest-700">
-	<h2 class="text-3xl md:text-4xl font-bold font-serif mb-4 text-espresso-900 dark:text-parchment-100">
+<section
+	class="bg-parchment-100 dark:bg-forest-900 rounded-lg shadow-md p-8 md:p-12 text-center border border-parchment-300 dark:border-forest-700"
+>
+	<h2
+		class="text-3xl md:text-4xl font-bold font-serif mb-4 text-espresso-900 dark:text-parchment-100"
+	>
 		Stay Updated
 	</h2>
 	<p class="text-base md:text-lg mb-6 max-w-2xl mx-auto text-espresso-700 dark:text-parchment-200">

@@ -11,8 +11,8 @@
 - **Explicit Typing**: Use TypeScript interfaces for `$props`.
   ```typescript
   interface Props {
-	title: string;
-	isActive?: boolean;
+  	title: string;
+  	isActive?: boolean;
   }
   let { title, isActive = false }: Props = $props();
   ```

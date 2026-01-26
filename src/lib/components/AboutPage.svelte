@@ -1,89 +1,105 @@
 <script lang="ts">
-	// Presentational component
+	const galleryImages = [
+		{
+			src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80',
+			alt: 'Antique books stacked on wooden table with vintage aesthetic'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&q=80',
+			alt: 'Open book with warm lighting and cozy reading atmosphere'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80',
+			alt: 'Coffee cup and journal on rustic wooden surface'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80',
+			alt: 'Serene forest path with dappled sunlight'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1502759683299-cdcd6974244f?w=800&q=80',
+			alt: 'Charming European countryside village scene'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1519791883288-dc8bd696e667?w=800&q=80',
+			alt: 'Vintage typewriter on wooden desk with nostalgic ambiance'
+		}
+	];
 </script>
 
-<div class="max-w-5xl mx-auto px-4 py-8">
+<div class="mx-auto px-4 py-8 md:py-12">
 	<div class="space-y-10 md:space-y-12">
-		<div class="bg-white dark:bg-forest-800 rounded-lg p-6 md:p-8 shadow-sm border border-parchment-300 dark:border-forest-700">
-			<h1 class="text-4xl md:text-5xl font-bold font-serif leading-tight text-espresso-900 dark:text-parchment-100 mb-6">
+		<div
+			class="bg-white dark:bg-forest-900 rounded-lg p-8 md:p-12 shadow-lg dark:shadow-2xl border border-parchment-300 dark:border-forest-600 transition-colors duration-300"
+		>
+			<h1
+				class="text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight text-espresso-900 dark:text-parchment-100 mb-8"
+			>
 				About Chloe
 			</h1>
-			<p class="text-espresso-700 dark:text-parchment-200 text-base md:text-lg font-normal leading-relaxed">
-				Chloe is a celebrated author of young adult fiction, known for her heartwarming tales
-				of romance and faith. Her writing is deeply influenced by the timeless works of Jane
-				Austen, blending classic storytelling with a contemporary Christian perspective.
-				Chloe's novels explore themes of love, virtue, and personal growth, set against the
-				backdrop of charming, small-town life.
+			<p
+				class="text-espresso-700 dark:text-parchment-200 text-lg md:text-xl lg:text-2xl font-normal leading-relaxed"
+			>
+				Chloe crafts heartwarming young adult fiction that blends Austen-inspired romance with
+				contemporary faith. Her stories explore love, virtue, and growth in charming small-town
+				settings.
 			</p>
 		</div>
 
-		<section>
-			<h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-4">
-				Chloe's Journey
+		<section
+			class="bg-white dark:bg-forest-900 rounded-lg p-8 md:p-12 shadow-lg dark:shadow-2xl border border-parchment-300 dark:border-forest-600 transition-colors duration-300"
+		>
+			<h2
+				class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-6"
+			>
+				Her Journey
 			</h2>
-			<p class="text-base md:text-lg font-normal leading-relaxed text-espresso-700 dark:text-parchment-200">
-				From a young age, Chloe found solace and inspiration in the pages of books, particularly
-				those penned by Jane Austen. This early passion for literature blossomed into a desire to
-				craft her own stories, filled with characters who navigate the complexities of life with
-				grace and resilience. Her faith plays a central role in her narratives, offering a message
-				of hope and redemption.
+			<p
+				class="text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-espresso-700 dark:text-parchment-200"
+			>
+				Inspired by Jane Austen from childhood, Chloe transforms her passion for classic literature
+				into stories of grace and resilience. Faith anchors her narratives, weaving hope and
+				redemption throughout.
 			</p>
 		</section>
 
-		<section>
-			<h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-4">
-				Beyond the Page
+		<section
+			class="bg-white dark:bg-forest-900 rounded-lg p-8 md:p-12 shadow-lg dark:shadow-2xl border border-parchment-300 dark:border-forest-600 transition-colors duration-300"
+		>
+			<h2
+				class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-6"
+			>
+				Beyond Writing
 			</h2>
-			<p class="text-base md:text-lg font-normal leading-relaxed text-espresso-700 dark:text-parchment-200">
-				When she's not writing, Chloe enjoys exploring new cultures through travel, savoring the
-				rich flavors of coffee, and spending quality time with her loved ones. These experiences
-				often find their way into her stories, adding depth and authenticity to her characters and
-				settings.
+			<p
+				class="text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-espresso-700 dark:text-parchment-200"
+			>
+				Travel, coffee culture, and time with loved ones fuel her creativity. These experiences
+				enrich her characters and settings with authentic depth.
 			</p>
 		</section>
 
-		<section>
-			<h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-6">
+		<section
+			class="bg-white dark:bg-forest-900 rounded-lg p-8 md:p-12 shadow-lg dark:shadow-2xl border border-parchment-300 dark:border-forest-600 transition-colors duration-300"
+		>
+			<h2
+				class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-8"
+			>
 				Inspiration Gallery
 			</h2>
-			<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				{#each galleryImages as image (image.src)}
 					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2eZ47YtXG8L3ceXm36rjjpOwjT-cUkp_kaYpNolWAWKQupO8PpY87PWovWqCffpmS4LL-zAjc7n5TQ6KdLxFdDywgiP9tVTN5EZF_UULcnVxUQyGBZVd1UfqIKOBSjGTVMK4f3M_KYWrO7ZBI_POVdXuUCvtTdOoieTB-qNcXR4nxRVM21yjbITNOcb7poPQ5meG2htGoBL5tybeDVtAC0w82gS8TxNzWp9FBsAR_eT4b6SZAJpsiXFubA6hTugXz5Tc5qG8wZeU');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMaRW7MaennlMKN5Ms1emp0qij9133hXMYC1DYWs5MUCHF8PKmkVTuoRQYITJVWiUBoZlKQE0-NG0Vu4cSW1xZUFjb3cW3GO3uwFwsEK0Lko-HPWFKedKSoTEuDD8jUlVr3wmpl4mlTFHnWwvilTiDCKjcys1TBlreCpjlbSASDTx4Lun8GvlJ38I7FOFl3h2wYmBtZyLk_WWoh5wOdjMOKy5_BBIhYaFqt6dIwXo8Jl2MSum7oknSs3Zs-X-k_UsuzZ8y-XNWyf0');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1hj77H_UROWnMnXaeXVXdvqYNJVRDrwTnMZ-Nnx0C1CHsJPOYfyikDRF5HYLz_jgOxyWc1_eo8cjfmWAyvyg1rp9K6Sl3Hh-H6UV1Naq4Lvx66RQK25YQXVdJo3ExrhqYKqwM7K31uCj3qyoJefG_7EtFb6YXR2BKbcQ8fvv5quIBYUuR7IS0i-5CuL6YfmD_tUoYAyfbAb7yOGAtsbpPYlm2tFl8vlal9953SVqNiJgcaMG5PfgFZjA9a3-LGNfAeIdSjCvYOok');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBviqrMNeaAbRE2sT9OmFzu5U4YiqghUN1LzStaOJD8prohIXJcl-oE5bnJ9HLD0c_7jbR3zH7RlF8AFXcshiJgIHl4nxr9rWvK4KzpuY8zeDJF3_7Hf0rHD4qDF_gwUXZ7A2KtWH_Fq49TPEx7KtbeWyy4sXsZA-J8cQay6Tr9a7lHoWabJhnNsL_eRj7RHN_7GloCJ_h7xnBE4dV9EAIWtUqfiIvwT7tC91TOqCI-B7tDcHa0aRp4eiyfrdAYmJ46j60YFRkigpA');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf9QPMQtjIj_H7MNssgAHvWL2rmtkBdvcLPrC78zfbsM_k2tkC4P2G0gThfkWbR3qzG75iFyLMHtAC99fk1S5hkmN0jvYaijGI3X6cjhwqCB2n5kcmsquiB81458eR_9xRol8HeEMW0Mre4Z317dAqBzNpwNpnB7jOSpDybLzW-4wuNdcM8m-ojpJoDefqLDmRmJwxeZNz06RnLSM-5wf4igVvZb1mVDseCkWV9V6GSJ7p4Jhjn2N4rBcEX2-1ZL2MrrxS-JRnMBk');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUyZBM8Z-tDe1XsVAR9rmGEJa8Fp3U6c17IltabHYDE__ogvdpwIOMNyWAH9osf8tN7UwMiEjeS7nh6NnVVAyVkbR0KgvWSjoCabRqtPsof7pqNv4IwPbNxS5TrEpwQ5drgontmcyeDyPeCX3qw1FCSWoIjawbdI_Zj6Bp4fwaIG_EIvA1x0PojkPQIaEIs3qWlKvckKqDE6VypZENONRZ4CzcGo7cXoY5Eezq0xkEi7t_Eh6lw4ZVciB2jFg53PeTbGoAevnp4Aw');"
-					></div>
-				</div>
+						class="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-parchment-100 dark:bg-forest-800"
+					>
+						<img
+							src={image.src}
+							alt={image.alt}
+							class="w-full aspect-video object-cover transform group-hover:scale-105 transition-transform duration-500"
+							loading="lazy"
+						/>
+					</div>
+				{/each}
 			</div>
 		</section>
 	</div>
