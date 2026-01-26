@@ -3,14 +3,20 @@
 </script>
 
 <div class="w-full">
-	<div class="bg-parchment-200 dark:bg-forest-900 text-espresso-700 dark:text-parchment-100 min-h-screen">
+	<div
+		class="bg-parchment-200 dark:bg-forest-900 text-espresso-700 dark:text-parchment-100 min-h-screen"
+	>
 		<div class="container mx-auto px-6 md:px-8 py-12">
 			<div class="flex flex-col max-w-6xl mx-auto">
 				<div class="mb-6">
-					<h1 class="text-4xl md:text-5xl font-bold font-serif leading-tight text-espresso-900 dark:text-parchment-50 mb-3">
+					<h1
+						class="text-4xl md:text-5xl font-bold font-serif leading-tight text-espresso-900 dark:text-parchment-50 mb-3"
+					>
 						Chloe's Journal
 					</h1>
-					<p class="text-espresso-600 dark:text-parchment-300 text-base font-normal leading-normal max-w-2xl">
+					<p
+						class="text-espresso-600 dark:text-parchment-300 text-base font-normal leading-normal max-w-2xl"
+					>
 						A collection of thoughts, reflections, and stories from my life as a YA author.
 					</p>
 				</div>
@@ -40,23 +46,32 @@
 
 				<div class="space-y-6">
 					<!-- Journal Entry 1 -->
-					<div class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700">
+					<div
+						class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700"
+					>
 						<div class="flex flex-col md:flex-row gap-6">
 							<div class="flex-1 flex flex-col justify-between order-2 md:order-1">
 								<div class="flex flex-col gap-2">
-									<h2 class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight">
+									<h2
+										class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight"
+									>
 										The Art of Storytelling: Crafting Characters with Depth
 									</h2>
 									<p class="text-cedar-600 dark:text-cedar-300 text-sm font-medium">
 										Literary Reflections
 									</p>
-									<p class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2">
+									<p
+										class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2"
+									>
 										Exploring the nuances of character development, drawing inspiration from classic
-										literature and personal experiences. To create characters that breathe, we must look beyond the archetype...
+										literature and personal experiences. To create characters that breathe, we must
+										look beyond the archetype...
 									</p>
 								</div>
 								<div class="mt-4">
-									<button class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4">
+									<button
+										class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4"
+									>
 										Read More →
 									</button>
 								</div>
@@ -69,23 +84,32 @@
 					</div>
 
 					<!-- Journal Entry 2 -->
-					<div class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700">
+					<div
+						class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700"
+					>
 						<div class="flex flex-col md:flex-row gap-6">
 							<div class="flex-1 flex flex-col justify-between order-2 md:order-1">
 								<div class="flex flex-col gap-2">
-									<h2 class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight">
+									<h2
+										class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight"
+									>
 										Wanderlust and Writing: A Journey Through the English Countryside
 									</h2>
 									<p class="text-cedar-600 dark:text-cedar-300 text-sm font-medium">
 										Life &amp; Travel
 									</p>
-									<p class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2">
-										Reflections on a recent trip to the English countryside, exploring the landscapes
-										that inspired some of my favorite stories. The rolling hills of Derbyshire whispered secrets of old...
+									<p
+										class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2"
+									>
+										Reflections on a recent trip to the English countryside, exploring the
+										landscapes that inspired some of my favorite stories. The rolling hills of
+										Derbyshire whispered secrets of old...
 									</p>
 								</div>
 								<div class="mt-4">
-									<button class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4">
+									<button
+										class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4"
+									>
 										Read More →
 									</button>
 								</div>
@@ -98,23 +122,31 @@
 					</div>
 
 					<!-- Journal Entry 3 -->
-					<div class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700">
+					<div
+						class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700"
+					>
 						<div class="flex flex-col md:flex-row gap-6">
 							<div class="flex-1 flex flex-col justify-between order-2 md:order-1">
 								<div class="flex flex-col gap-2">
-									<h2 class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight">
+									<h2
+										class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight"
+									>
 										Finding Faith in Fiction: Weaving Spiritual Themes into YA Romance
 									</h2>
 									<p class="text-cedar-600 dark:text-cedar-300 text-sm font-medium">
 										Faith &amp; Perspective
 									</p>
-									<p class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2">
+									<p
+										class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2"
+									>
 										Discussing the role of faith in my writing, and how I integrate spiritual themes
 										into my stories in a meaningful way without being preachy...
 									</p>
 								</div>
 								<div class="mt-4">
-									<button class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4">
+									<button
+										class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4"
+									>
 										Read More →
 									</button>
 								</div>
@@ -127,23 +159,31 @@
 					</div>
 
 					<!-- Journal Entry 4 -->
-					<div class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700">
+					<div
+						class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700"
+					>
 						<div class="flex flex-col md:flex-row gap-6">
 							<div class="flex-1 flex flex-col justify-between order-2 md:order-1">
 								<div class="flex flex-col gap-2">
-									<h2 class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight">
+									<h2
+										class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight"
+									>
 										The Magic of First Drafts: Embracing Imperfection
 									</h2>
 									<p class="text-cedar-600 dark:text-cedar-300 text-sm font-medium">
 										Literary Reflections
 									</p>
-									<p class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2">
+									<p
+										class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2"
+									>
 										Sharing my thoughts on the writing process, and the importance of embracing
 										imperfection in the first draft. Let the ink flow freely...
 									</p>
 								</div>
 								<div class="mt-4">
-									<button class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4">
+									<button
+										class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4"
+									>
 										Read More →
 									</button>
 								</div>
@@ -156,23 +196,31 @@
 					</div>
 
 					<!-- Journal Entry 5 -->
-					<div class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700">
+					<div
+						class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700"
+					>
 						<div class="flex flex-col md:flex-row gap-6">
 							<div class="flex-1 flex flex-col justify-between order-2 md:order-1">
 								<div class="flex flex-col gap-2">
-									<h2 class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight">
+									<h2
+										class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight"
+									>
 										Exploring Historical Settings: Research and Inspiration
 									</h2>
 									<p class="text-cedar-600 dark:text-cedar-300 text-sm font-medium">
 										Literary Reflections
 									</p>
-									<p class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2">
+									<p
+										class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2"
+									>
 										A look into the research process for my historical novels, and the inspiration I
 										draw from different time periods.
 									</p>
 								</div>
 								<div class="mt-4">
-									<button class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4">
+									<button
+										class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4"
+									>
 										Read More →
 									</button>
 								</div>
@@ -185,23 +233,31 @@
 					</div>
 
 					<!-- Journal Entry 6 -->
-					<div class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700">
+					<div
+						class="bg-parchment-100 dark:bg-forest-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-parchment-300 dark:border-forest-700"
+					>
 						<div class="flex flex-col md:flex-row gap-6">
 							<div class="flex-1 flex flex-col justify-between order-2 md:order-1">
 								<div class="flex flex-col gap-2">
-									<h2 class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight">
+									<h2
+										class="text-xl md:text-2xl font-bold font-serif text-espresso-900 dark:text-parchment-50 leading-tight"
+									>
 										The Power of Community: Connecting with Readers
 									</h2>
 									<p class="text-cedar-600 dark:text-cedar-300 text-sm font-medium">
 										Life &amp; Travel
 									</p>
-									<p class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2">
+									<p
+										class="text-espresso-600 dark:text-parchment-200 text-base leading-relaxed mt-2"
+									>
 										Reflecting on the importance of community in the writing world, and the
 										connections I've made with readers and fellow authors.
 									</p>
 								</div>
 								<div class="mt-4">
-									<button class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4">
+									<button
+										class="text-cedar-600 dark:text-cedar-300 text-sm font-bold hover:underline decoration-2 underline-offset-4"
+									>
 										Read More →
 									</button>
 								</div>

@@ -1,90 +1,257 @@
 <script lang="ts">
-	// Presentational component
+	import { onMount } from 'svelte';
+
+	// Gallery images for atmosphere section
+	const atmosphereImages = [
+		{
+			src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80',
+			alt: 'Books',
+			caption: 'Vintage pages'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80',
+			alt: 'Coffee',
+			caption: 'Morning rituals'
+		},
+		{
+			src: 'https://images.unsplash.com/photo-1502759683299-cdcd6974244f?w=600&q=80',
+			alt: 'Travel',
+			caption: 'Quiet places'
+		}
+	];
+
+	onMount(() => {
+		// Scroll reveal logic
+		const observerOptions = {
+			threshold: 0.15,
+			rootMargin: '0px 0px -50px 0px'
+		};
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('active');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, observerOptions);
+
+		document.querySelectorAll('.reveal-text, .reveal-image').forEach((el) => {
+			observer.observe(el);
+		});
+
+		return () => {
+			observer.disconnect();
+		};
+	});
 </script>
 
-<div class="max-w-5xl mx-auto px-4 py-8">
-	<div class="space-y-10 md:space-y-12">
-		<div class="bg-white dark:bg-forest-800 rounded-lg p-6 md:p-8 shadow-sm border border-parchment-300 dark:border-forest-700">
-			<h1 class="text-4xl md:text-5xl font-bold font-serif leading-tight text-espresso-900 dark:text-parchment-100 mb-6">
-				About Chloe
+<main>
+	<!-- HERO SECTION: Morning Paper / Evening Novel -->
+	<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+		<!-- Background Typography (Texture) -->
+		<div
+			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none select-none z-0"
+		>
+			<h1
+				class="text-[20vw] font-serif font-bold leading-none text-ink-900 opacity-[0.03] dark:opacity-[0.05] mix-blend-multiply dark:mix-blend-overlay blur-[0px] transition-opacity duration-1000 text-depth"
+			>
+				CHAPTER I
 			</h1>
-			<p class="text-espresso-700 dark:text-parchment-200 text-base md:text-lg font-normal leading-relaxed">
-				Chloe is a celebrated author of young adult fiction, known for her heartwarming tales
-				of romance and faith. Her writing is deeply influenced by the timeless works of Jane
-				Austen, blending classic storytelling with a contemporary Christian perspective.
-				Chloe's novels explore themes of love, virtue, and personal growth, set against the
-				backdrop of charming, small-town life.
-			</p>
 		</div>
 
-		<section>
-			<h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-4">
-				Chloe's Journey
-			</h2>
-			<p class="text-base md:text-lg font-normal leading-relaxed text-espresso-700 dark:text-parchment-200">
-				From a young age, Chloe found solace and inspiration in the pages of books, particularly
-				those penned by Jane Austen. This early passion for literature blossomed into a desire to
-				craft her own stories, filled with characters who navigate the complexities of life with
-				grace and resilience. Her faith plays a central role in her narratives, offering a message
-				of hope and redemption.
-			</p>
-		</section>
+		<div
+			class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center h-full"
+		>
+			<!-- Hero Image (Photo Frame Style) -->
+			<div class="lg:col-span-5 lg:col-start-2 order-2 lg:order-1 relative mt-16 lg:mt-0">
+				<div
+					class="relative w-full aspect-[4/5] max-w-sm mx-auto transform rotate-[-2deg] hover:rotate-0 transition-transform duration-700 ease-out cast-shadow"
+				>
+					<!-- Paper Edge Effect -->
+					<div
+						class="absolute inset-0 bg-paper-100 transform translate-x-1 translate-y-1 border border-paper-300"
+					></div>
 
-		<section>
-			<h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-4">
-				Beyond the Page
-			</h2>
-			<p class="text-base md:text-lg font-normal leading-relaxed text-espresso-700 dark:text-parchment-200">
-				When she's not writing, Chloe enjoys exploring new cultures through travel, savoring the
-				rich flavors of coffee, and spending quality time with her loved ones. These experiences
-				often find their way into her stories, adding depth and authenticity to her characters and
-				settings.
-			</p>
-		</section>
+					<!-- Main Image -->
+					<div
+						class="relative w-full h-full overflow-hidden bg-white border-[6px] border-white dark:border-paper-300 reveal-image active"
+					>
+						<img
+							src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&q=80"
+							alt="Chloe Writing"
+							class="w-full h-full object-cover filter contrast-110 sepia-[0.2] dark:sepia-[0.5] dark:brightness-[0.8] transition-all duration-1000"
+						/>
+						<!-- Inner Shadow for depth -->
+						<div
+							class="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.5)] opacity-0 dark:opacity-100 transition-opacity duration-1000"
+						></div>
+					</div>
 
-		<section>
-			<h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight tracking-tight text-espresso-900 dark:text-parchment-100 mb-6">
-				Inspiration Gallery
-			</h2>
-			<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+					<!-- Tape/Sticker -->
 					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2eZ47YtXG8L3ceXm36rjjpOwjT-cUkp_kaYpNolWAWKQupO8PpY87PWovWqCffpmS4LL-zAjc7n5TQ6KdLxFdDywgiP9tVTN5EZF_UULcnVxUQyGBZVd1UfqIKOBSjGTVMK4f3M_KYWrO7ZBI_POVdXuUCvtTdOoieTB-qNcXR4nxRVM21yjbITNOcb7poPQ5meG2htGoBL5tybeDVtAC0w82gS8TxNzWp9FBsAR_eT4b6SZAJpsiXFubA6hTugXz5Tc5qG8wZeU');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMaRW7MaennlMKN5Ms1emp0qij9133hXMYC1DYWs5MUCHF8PKmkVTuoRQYITJVWiUBoZlKQE0-NG0Vu4cSW1xZUFjb3cW3GO3uwFwsEK0Lko-HPWFKedKSoTEuDD8jUlVr3wmpl4mlTFHnWwvilTiDCKjcys1TBlreCpjlbSASDTx4Lun8GvlJ38I7FOFl3h2wYmBtZyLk_WWoh5wOdjMOKy5_BBIhYaFqt6dIwXo8Jl2MSum7oknSs3Zs-X-k_UsuzZ8y-XNWyf0');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1hj77H_UROWnMnXaeXVXdvqYNJVRDrwTnMZ-Nnx0C1CHsJPOYfyikDRF5HYLz_jgOxyWc1_eo8cjfmWAyvyg1rp9K6Sl3Hh-H6UV1Naq4Lvx66RQK25YQXVdJo3ExrhqYKqwM7K31uCj3qyoJefG_7EtFb6YXR2BKbcQ8fvv5quIBYUuR7IS0i-5CuL6YfmD_tUoYAyfbAb7yOGAtsbpPYlm2tFl8vlal9953SVqNiJgcaMG5PfgFZjA9a3-LGNfAeIdSjCvYOok');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBviqrMNeaAbRE2sT9OmFzu5U4YiqghUN1LzStaOJD8prohIXJcl-oE5bnJ9HLD0c_7jbR3zH7RlF8AFXcshiJgIHl4nxr9rWvK4KzpuY8zeDJF3_7Hf0rHD4qDF_gwUXZ7A2KtWH_Fq49TPEx7KtbeWyy4sXsZA-J8cQay6Tr9a7lHoWabJhnNsL_eRj7RHN_7GloCJ_h7xnBE4dV9EAIWtUqfiIvwT7tC91TOqCI-B7tDcHa0aRp4eiyfrdAYmJ46j60YFRkigpA');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCf9QPMQtjIj_H7MNssgAHvWL2rmtkBdvcLPrC78zfbsM_k2tkC4P2G0gThfkWbR3qzG75iFyLMHtAC99fk1S5hkmN0jvYaijGI3X6cjhwqCB2n5kcmsquiB81458eR_9xRol8HeEMW0Mre4Z317dAqBzNpwNpnB7jOSpDybLzW-4wuNdcM8m-ojpJoDefqLDmRmJwxeZNz06RnLSM-5wf4igVvZb1mVDseCkWV9V6GSJ7p4Jhjn2N4rBcEX2-1ZL2MrrxS-JRnMBk');"
-					></div>
-				</div>
-				<div class="overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-					<div
-						class="w-full bg-center bg-no-repeat aspect-square bg-cover transform hover:scale-105 transition-transform duration-500"
-						style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUyZBM8Z-tDe1XsVAR9rmGEJa8Fp3U6c17IltabHYDE__ogvdpwIOMNyWAH9osf8tN7UwMiEjeS7nh6NnVVAyVkbR0KgvWSjoCabRqtPsof7pqNv4IwPbNxS5TrEpwQ5drgontmcyeDyPeCX3qw1FCSWoIjawbdI_Zj6Bp4fwaIG_EIvA1x0PojkPQIaEIs3qWlKvckKqDE6VypZENONRZ4CzcGo7cXoY5Eezq0xkEi7t_Eh6lw4ZVciB2jFg53PeTbGoAevnp4Aw');"
+						class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-cedar-200/90 backdrop-blur-sm rotate-[-1deg] shadow-sm opacity-90"
 					></div>
 				</div>
 			</div>
-		</section>
-	</div>
-</div>
+
+			<!-- Hero Text (Headline Style) -->
+			<div class="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 text-center lg:text-left">
+				<div class="reveal-text">
+					<div
+						class="inline-flex items-center space-x-3 mb-8 border-b border-cedar-500/30 pb-2"
+					>
+						<span class="text-cedar-600 dark:text-cedar-500 font-serif italic text-xl"
+							>The Author</span
+						>
+						<span
+							class="w-1 h-1 rounded-full bg-cedar-500 shadow-[0_0_8px_rgba(217,78,24,0.8)]"
+						></span>
+						<span
+							class="font-sans text-[10px] tracking-widest uppercase text-ink-600 dark:text-paper-400"
+							>Est. 1995</span
+						>
+					</div>
+
+					<h2
+						class="text-6xl md:text-8xl font-serif font-bold font-headline leading-[0.85] text-ink-900 dark:text-paper-100 mb-8 tracking-tight text-depth"
+					>
+						Weaving <br />
+						<span class="text-cedar-600 dark:text-cedar-500 font-serif italic font-normal"
+							>Sacred</span
+						> Threads.
+					</h2>
+				</div>
+				<div class="reveal-text" style="transition-delay: 0.2s;">
+					<p
+						class="font-serif text-xl md:text-2xl leading-relaxed text-ink-700 dark:text-paper-300 max-w-lg mx-auto lg:mx-0 border-l-2 border-cedar-500/50 pl-6 text-depth"
+					>
+						Where the propriety of a Regency ballroom meets the raw honesty of modern faith.
+						<br /><span
+							class="text-base font-sans mt-4 block text-ink-500 dark:text-paper-400 uppercase tracking-widest"
+							>A world of quiet strength.</span
+						>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- THE LETTER (Intimate) -->
+	<section
+		class="py-32 relative overflow-hidden transition-colors duration-500 bg-white dark:bg-[#120e0d]"
+	>
+		<!-- Vertical Line -->
+		<div
+			class="absolute left-1/2 transform -translate-x-1/2 top-0 h-20 w-[1px] bg-cedar-500/40"
+		></div>
+
+		<div class="container mx-auto px-6 md:px-20 max-w-3xl text-center relative z-10">
+			<div class="mb-12">
+				<h3
+					class="font-hand text-5xl md:text-6xl text-cedar-600 dark:text-cedar-500 transform -rotate-2 reveal-text drop-shadow-sm text-depth"
+				>
+					A Note to You
+				</h3>
+			</div>
+
+			<div
+				class="font-serif text-2xl md:text-4xl leading-relaxed text-ink-900 dark:text-paper-200 reveal-text space-y-10 text-depth"
+			>
+				<p>
+					"I don't write for the perfect. I write for the <span
+						class="italic text-cedar-600 border-b-2 border-cedar-500/30 pb-1">anxious heart</span
+					> that still dares to hope."
+				</p>
+				<div class="w-16 h-[1px] bg-cedar-500 mx-auto opacity-50 shadow-[0_0_10px_rgba(217,78,24,0.5)]"></div>
+				<p
+					class="text-lg md:text-xl font-sans font-light leading-loose text-ink-600 dark:text-paper-400"
+				>
+					Jane Austen taught me that romance is a comedy of manners. Life taught me it is a
+					tragedy of grace. My stories exist in the tension between the two—finding God not in the
+					grand miracles, but in the quiet courage of getting up one more time.
+				</p>
+			</div>
+
+			<div class="mt-20 reveal-text cast-shadow">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png"
+					alt="Signature"
+					class="h-24 mx-auto opacity-80 dark:filter dark:invert transition-all duration-500"
+					style="filter: brightness(0.3) sepia(1) hue-rotate(-40deg) saturate(3);"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- THE MUSE (Atmosphere) -->
+	<section
+		class="py-32 bg-paper-200 dark:bg-[#080605] transition-colors duration-500 border-t border-ink-900/5 dark:border-paper-100/5"
+	>
+		<div class="container mx-auto px-6 mb-20 flex flex-col md:flex-row items-end justify-between">
+			<div class="reveal-text">
+				<span
+					class="font-sans text-xs tracking-[0.3em] text-cedar-600 uppercase block mb-4 font-bold"
+					>The Atmosphere</span
+				>
+				<h2
+					class="text-5xl md:text-7xl font-serif text-ink-900 dark:text-paper-100 leading-none text-depth"
+				>
+					Burnt Orange <br /> & <span class="italic text-cedar-600 dark:text-cedar-500"
+						>Old Ink</span
+					>
+				</h2>
+			</div>
+		</div>
+
+		<!-- Image Grid -->
+		<div class="container mx-auto px-6">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+				{#each atmosphereImages as image, i}
+					<div
+						class="group relative aspect-[3/4] cursor-pointer reveal-text cast-shadow {i === 1
+							? 'md:mt-24'
+							: ''}"
+						style="transition-delay: {i * 0.1}s;"
+					>
+						<!-- Frame -->
+						<div
+							class="absolute inset-0 border border-ink-900/10 dark:border-paper-100/10 transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-5 group-hover:translate-y-5"
+						></div>
+
+						<div
+							class="absolute inset-0 bg-white dark:bg-[#1a1615] p-3 transition-transform duration-500 group-hover:-translate-y-2"
+						>
+							<div
+								class="w-full h-full overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-1000"
+							>
+								<img
+									src={image.src}
+									class="w-full h-full object-cover"
+									alt={image.alt}
+									loading="lazy"
+								/>
+								<div
+									class="absolute inset-0 bg-cedar-900/20 mix-blend-multiply dark:bg-cedar-500/10 dark:mix-blend-overlay"
+								></div>
+							</div>
+						</div>
+						<div
+							class="absolute -bottom-10 {i === 1
+								? 'right-0'
+								: i === 2
+									? 'left-8'
+									: 'left-0'} font-hand text-2xl text-cedar-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform {i === 1
+								? 'rotate-3'
+								: i === 2
+									? '-rotate-2'
+									: '-rotate-6'}"
+						>
+							{image.caption}
+						</div>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</section>
+</main>

@@ -20,17 +20,30 @@ export default {
 					950: '#050905'
 				},
 				cedar: {
-					50: '#faf6f5',
-					100: '#f5edeb',
-					200: '#e7d1cd',
-					300: '#d9b5af',
-					400: '#cb9991',
-					500: '#A45A52', // Warm cedar accent
-					600: '#834842',
-					700: '#623631',
-					800: '#422421',
-					900: '#211210',
-					950: '#110908'
+					50: '#fff8f2',
+					100: '#ffefe6',
+					200: '#ffdcc9',
+					300: '#ffbf99',
+					400: '#ff955c',
+					500: '#D94E18', // DEEPER BURNT ORANGE
+					600: '#C0370A', // RUST
+					700: '#912708',
+					800: '#73210d',
+					900: '#401309'
+				},
+				ink: {
+					800: '#1e1b1b',
+					900: '#0a0909'
+				},
+				paper: {
+					100: '#fcfbf9', // Fresh Paper
+					200: '#f2eee6', // Aged Newsprint
+					300: '#e6dfd1'
+				},
+				brass: {
+					light: '#fbf4b6',
+					base: '#d4af37',
+					dark: '#aa8c2c'
 				},
 				parchment: {
 					50: '#fefdfb',
@@ -65,8 +78,62 @@ export default {
 				'espresso-brown': '#3B2B25'
 			},
 			fontFamily: {
-				serif: ['Merriweather', 'serif'],
-				sans: ['Inter', 'sans-serif']
+				serif: ['Cormorant Garamond', 'Merriweather', 'serif'],
+				sans: ['Montserrat', 'Inter', 'sans-serif'],
+				hand: ['La Belle Aurore', 'cursive']
+			},
+			backgroundImage: {
+				noise:
+					"url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.6%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.06%22/%3E%3C/svg%3E')"
+			},
+			animation: {
+				float: 'float 8s ease-in-out infinite',
+				swing: 'swing 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards',
+				sway: 'sway 5s ease-in-out infinite',
+				flicker: 'flicker 5s infinite',
+				dust: 'dust 60s linear infinite',
+				'dust-dense': 'dust 40s linear infinite', /* Faster, denser feel */
+				'rise-steam': 'riseSteam 4s ease-in infinite',
+				'rise-fire': 'riseFire 3s ease-out infinite'
+			},
+			keyframes: {
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-15px)' }
+				},
+				swing: {
+					'0%': { transform: 'rotate(0deg)' },
+					'20%': { transform: 'rotate(25deg)' },
+					'40%': { transform: 'rotate(-15deg)' },
+					'60%': { transform: 'rotate(10deg)' },
+					'80%': { transform: 'rotate(-5deg)' },
+					'100%': { transform: 'rotate(0deg)' }
+				},
+				sway: {
+					'0%, 100%': { transform: 'rotate(-2deg)' },
+					'50%': { transform: 'rotate(2deg)' }
+				},
+				flicker: {
+					'0%, 100%': { opacity: '0.97' },
+					'10%': { opacity: '0.90' },
+					'15%': { opacity: '0.97' },
+					'50%': { opacity: '0.94' },
+					'80%': { opacity: '0.98' }
+				},
+				dust: {
+					'0%': { backgroundPosition: '0% 0%' },
+					'100%': { backgroundPosition: '20% 100%' }
+				},
+				riseSteam: {
+					'0%': { transform: 'translateY(100%) scale(1)', opacity: '0' },
+					'20%': { opacity: '0.4' },
+					'100%': { transform: 'translateY(-20%) scale(1.5)', opacity: '0' }
+				},
+				riseFire: {
+					'0%': { transform: 'translateY(100%) scale(0.8)', opacity: '0' },
+					'20%': { opacity: '0.5' },
+					'100%': { transform: 'translateY(-10%) scale(1.2)', opacity: '0' }
+				}
 			},
 			spacing: {
 				18: '4.5rem',
@@ -76,7 +143,7 @@ export default {
 				250: '250ms'
 			},
 			transitionTimingFunction: {
-				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)'
+				smooth: 'cubic-bezier(0.4, 0, 0.2, 1)'
 			}
 		}
 	},
