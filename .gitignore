@@ -30,4 +30,8 @@ playwright-report/
 test-results/
 
 # Design files
-/design
+/design.agents/
+skills-lock.json
+
+# Agent scratchpads (local working memory; not part of the project source)
+/_plans/

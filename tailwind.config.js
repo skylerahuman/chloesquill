@@ -31,6 +31,19 @@ export default {
 					800: '#73210d',
 					900: '#401309'
 				},
+				// Rose-gold accent family — see _plans/.../decision-rose-gold.md
+				rose: {
+					50: '#fbf3f1',
+					100: '#f3e0db',
+					200: '#e6c1b9',
+					300: '#d9a298',
+					400: '#cf8579',
+					500: '#c0877a', // Rose gold — primary accent
+					600: '#a86c5f',
+					700: '#8d5448',
+					800: '#6e3e34',
+					900: '#4a2820'
+				},
 				ink: {
 					800: '#1e1b1b',
 					900: '#0a0909'
@@ -41,9 +54,7 @@ export default {
 					300: '#e6dfd1'
 				},
 				brass: {
-					light: '#fbf4b6',
-					base: '#d4af37',
-					dark: '#aa8c2c'
+					base: '#d4af37'
 				},
 				parchment: {
 					50: '#fefdfb',
@@ -81,59 +92,6 @@ export default {
 				serif: ['Cormorant Garamond', 'Merriweather', 'serif'],
 				sans: ['Montserrat', 'Inter', 'sans-serif'],
 				hand: ['La Belle Aurore', 'cursive']
-			},
-			backgroundImage: {
-				noise:
-					"url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.6%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.06%22/%3E%3C/svg%3E')"
-			},
-			animation: {
-				float: 'float 8s ease-in-out infinite',
-				swing: 'swing 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards',
-				sway: 'sway 5s ease-in-out infinite',
-				flicker: 'flicker 5s infinite',
-				dust: 'dust 60s linear infinite',
-				'dust-dense': 'dust 40s linear infinite', /* Faster, denser feel */
-				'rise-steam': 'riseSteam 4s ease-in infinite',
-				'rise-fire': 'riseFire 3s ease-out infinite'
-			},
-			keyframes: {
-				float: {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-15px)' }
-				},
-				swing: {
-					'0%': { transform: 'rotate(0deg)' },
-					'20%': { transform: 'rotate(25deg)' },
-					'40%': { transform: 'rotate(-15deg)' },
-					'60%': { transform: 'rotate(10deg)' },
-					'80%': { transform: 'rotate(-5deg)' },
-					'100%': { transform: 'rotate(0deg)' }
-				},
-				sway: {
-					'0%, 100%': { transform: 'rotate(-2deg)' },
-					'50%': { transform: 'rotate(2deg)' }
-				},
-				flicker: {
-					'0%, 100%': { opacity: '0.97' },
-					'10%': { opacity: '0.90' },
-					'15%': { opacity: '0.97' },
-					'50%': { opacity: '0.94' },
-					'80%': { opacity: '0.98' }
-				},
-				dust: {
-					'0%': { backgroundPosition: '0% 0%' },
-					'100%': { backgroundPosition: '20% 100%' }
-				},
-				riseSteam: {
-					'0%': { transform: 'translateY(100%) scale(1)', opacity: '0' },
-					'20%': { opacity: '0.4' },
-					'100%': { transform: 'translateY(-20%) scale(1.5)', opacity: '0' }
-				},
-				riseFire: {
-					'0%': { transform: 'translateY(100%) scale(0.8)', opacity: '0' },
-					'20%': { opacity: '0.5' },
-					'100%': { transform: 'translateY(-10%) scale(1.2)', opacity: '0' }
-				}
 			},
 			spacing: {
 				18: '4.5rem',
