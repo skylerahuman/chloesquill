@@ -35,7 +35,7 @@
 			>
 				<span
 					class="nerd-font-icon text-lg text-cedar-400 group-hover:text-paper-100 group-focus-visible:text-paper-100 transition-colors"
-					aria-hidden="true">&#xf3a8;</span
+					aria-hidden="true">&#xf2bf;</span
 				>
 				<span>Goodreads</span>
 			</a>
