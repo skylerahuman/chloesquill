@@ -84,11 +84,12 @@
 			viewBox="0 0 40 180"
 			class="text-ink-900 dark:text-paper-100 fill-current overflow-hidden transition-colors duration-500"
 		>
-			<g 
+			<g
 				class="pull-group"
 				style="transform: translateY({pullOffset}px)"
 			>
-				{#each Array(12) as _, i}
+				<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
+				{#each Array(12) as _, i (i)}
 					{@const yPos = 8 + (i - 9) * beadSpacing}
 					<circle 
 						cx="20" 

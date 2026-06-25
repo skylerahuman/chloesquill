@@ -3,10 +3,6 @@
 	import '../app.css';
 	import { theme } from '$lib/stores/theme';
 	import ThemeLampToggle from '$lib/components/ThemeLampToggle.svelte';
-	import LightingEngine from '$lib/components/LightingEngine.svelte';
-	import AmbientParticles from '$lib/components/AmbientParticles.svelte';
-	import MoodBoardCarousel from '$lib/components/MoodBoardCarousel.svelte';
-	import InteractiveQuill from '$lib/components/InteractiveQuill.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
@@ -21,35 +17,31 @@
 	}
 </script>
 
-<LightingEngine />
-
-<div class="min-h-screen theme-transition bg-paper-200 dark:bg-[#080605]">
+<div class="min-h-screen theme-transition bg-parchment-200 dark:bg-forest-900">
 	<!-- NAVIGATION -->
 	<nav
-		class="fixed top-0 w-full z-40 px-6 md:px-12 py-8 flex justify-between items-start mix-blend-normal transition-colors duration-500"
+		class="fixed top-0 w-full z-40 px-6 md:px-12 py-8 flex justify-between items-start transition-colors duration-500"
 	>
 		<!-- Logo -->
 		<a
 			href="/"
-			class="text-3xl font-serif italic font-bold tracking-tight relative group cursor-pointer z-50 text-ink-900 dark:text-paper-100 mix-blend-difference flex items-center gap-3"
+			class="text-3xl font-serif italic font-bold tracking-tight relative group cursor-pointer z-50 text-espresso-900 dark:text-parchment-100"
 		>
-			<InteractiveQuill />
 			Chloe.
 			<span
-				class="absolute -bottom-1 left-0 w-0 h-[2px] bg-cedar-500 transition-all duration-300 group-hover:w-full"
+				class="absolute -bottom-1 left-0 w-0 h-[1px] bg-rose-500 transition-all duration-300 group-hover:w-full"
 			></span>
 		</a>
 
 		<div class="flex items-start space-x-12 z-50">
 			<!-- Links -->
 			<div
-				class="hidden md:flex space-x-8 text-[11px] font-sans tracking-[0.2em] uppercase font-bold text-ink-800/70 dark:text-paper-200/70 pt-4 mix-blend-difference"
+				class="hidden md:flex space-x-8 text-[11px] font-sans tracking-[0.2em] uppercase font-bold text-espresso-800/70 dark:text-parchment-200/70 pt-4"
 			>
-				<a href="/" class="hover:text-cedar-500 transition-colors">Home</a>
-				<a href="/books" class="hover:text-cedar-500 transition-colors">Books</a>
-				<a href="/journal" class="hover:text-cedar-500 transition-colors">Journal</a>
-				<a href="/about" class="hover:text-cedar-500 transition-colors">About</a>
-				<a href="/contact" class="hover:text-cedar-500 transition-colors">Contact</a>
+				<a href="/" class="hover:text-rose-500 transition-colors">Home</a>
+				<a href="/projects" class="hover:text-rose-500 transition-colors">Projects</a>
+				<a href="/about" class="hover:text-rose-500 transition-colors">About</a>
+				<a href="/contact" class="hover:text-rose-500 transition-colors">Contact</a>
 			</div>
 
 			<!-- THE LAMP PULL CORD -->
@@ -59,7 +51,7 @@
 		<!-- Mobile Menu Button (Positioned Absolutely) -->
 		<button
 			onclick={toggleMobileMenu}
-			class="md:hidden absolute right-6 top-8 p-2 rounded-lg hover:bg-cedar-100 dark:hover:bg-cedar-900 transition-colors z-50"
+			class="md:hidden absolute right-6 top-8 p-2 rounded-lg hover:bg-rose-100 dark:hover:bg-rose-900 transition-colors z-50"
 			aria-label="Toggle menu"
 		>
 			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,36 +77,28 @@
 	<!-- Mobile Navigation Dropdown -->
 	{#if mobileMenuOpen}
 		<div
-			class="md:hidden fixed top-24 right-6 bg-white dark:bg-ink-900 rounded-lg shadow-2xl border border-cedar-300 dark:border-cedar-700 p-6 space-y-3 z-50 min-w-[200px]"
+			class="md:hidden fixed top-24 right-6 bg-parchment-50 dark:bg-espresso-900 rounded-lg border border-parchment-300 dark:border-espresso-700 p-6 space-y-3 z-50 min-w-[200px]"
 		>
 			<a
 				href="/"
 				data-sveltekit-preload-data="hover"
-				class="block py-2 font-sans font-medium hover:text-cedar-600 dark:hover:text-cedar-300"
+				class="block py-2 font-sans font-medium hover:text-rose-500 dark:hover:text-rose-400"
 				onclick={toggleMobileMenu}
 			>
 				Home
 			</a>
 			<a
-				href="/books"
+				href="/projects"
 				data-sveltekit-preload-data="hover"
-				class="block py-2 font-sans font-medium hover:text-cedar-600 dark:hover:text-cedar-300"
+				class="block py-2 font-sans font-medium hover:text-rose-500 dark:hover:text-rose-400"
 				onclick={toggleMobileMenu}
 			>
-				Books
-			</a>
-			<a
-				href="/journal"
-				data-sveltekit-preload-data="hover"
-				class="block py-2 font-sans font-medium hover:text-cedar-600 dark:hover:text-cedar-300"
-				onclick={toggleMobileMenu}
-			>
-				Journal
+				Projects
 			</a>
 			<a
 				href="/about"
 				data-sveltekit-preload-data="hover"
-				class="block py-2 font-sans font-medium hover:text-cedar-600 dark:hover:text-cedar-300"
+				class="block py-2 font-sans font-medium hover:text-rose-500 dark:hover:text-rose-400"
 				onclick={toggleMobileMenu}
 			>
 				About
@@ -122,7 +106,7 @@
 			<a
 				href="/contact"
 				data-sveltekit-preload-data="hover"
-				class="block py-2 font-sans font-medium hover:text-cedar-600 dark:hover:text-cedar-300"
+				class="block py-2 font-sans font-medium hover:text-rose-500 dark:hover:text-rose-400"
 				onclick={toggleMobileMenu}
 			>
 				Contact
@@ -131,10 +115,6 @@
 	{/if}
 
 	{@render children()}
-
-	<MoodBoardCarousel />
-
-	<AmbientParticles />
 
 	<Footer />
 </div>

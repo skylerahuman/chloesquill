@@ -16,7 +16,7 @@ describe('Footer Component', () => {
 		);
 		expect(instagram).toHaveAttribute('target', '_blank');
 		expect(goodreads).toHaveAttribute('target', '_blank');
-		expect(instagram).toHaveClass('text-cedar-500');
+		expect(instagram).toHaveClass('text-rose-300');
 		expect(container.querySelectorAll('.nerd-font-icon')).toHaveLength(2);
 		expect(container.querySelector('.nerd-font-icon')?.textContent).toBe('\uf16d');
 		expect(container.querySelectorAll('.nerd-font-icon')[1]?.textContent).toBe('\uf2bf');
