@@ -26,6 +26,11 @@
 	.font-headline {
 		letter-spacing: -0.03em;
 	}
+
+	.nerd-font-icon {
+		font-family:
+			'Symbols Nerd Font', 'Symbols Nerd Font Mono', 'Nerd Font', 'Nerd Font Mono', monospace;
+	}
 }
 
 @layer components {
