@@ -7,6 +7,7 @@
 	import AmbientParticles from '$lib/components/AmbientParticles.svelte';
 	import MoodBoardCarousel from '$lib/components/MoodBoardCarousel.svelte';
 	import InteractiveQuill from '$lib/components/InteractiveQuill.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 	let mobileMenuOpen = $state(false);
@@ -135,31 +136,5 @@
 
 	<AmbientParticles />
 
-	<!-- FOOTER -->
-	<footer class="bg-ink-900 dark:bg-[#050404] text-paper-200 py-32 relative overflow-hidden mt-12">
-		<!-- Dust Texture -->
-		<div
-			class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"
-		></div>
-		<!-- Bottom Glow (Reinforced Hearth) -->
-		<div
-			class="hidden dark:block absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-[300px] bg-gradient-to-t from-cedar-600/30 to-transparent blur-[50px] pointer-events-none"
-		></div>
-
-		<div class="container mx-auto px-6 relative z-10 flex flex-col items-center">
-			<h2 class="text-5xl md:text-8xl font-serif text-paper-300 mb-12 opacity-90 text-depth">
-				The End.
-			</h2>
-			<div
-				class="flex space-x-12 text-[10px] font-sans tracking-[0.3em] uppercase text-cedar-500 font-bold"
-			>
-				<a href="#" class="hover:text-white transition-colors">Instagram</a>
-				<a href="#" class="hover:text-white transition-colors">Goodreads</a>
-				<a href="#" class="hover:text-white transition-colors">Substack</a>
-			</div>
-			<p class="mt-16 text-[10px] text-ink-600 uppercase tracking-widest">
-				© 2026 Chloe | Designed & Developed by skylershuman.com
-			</p>
-		</div>
-	</footer>
+	<Footer />
 </div>
